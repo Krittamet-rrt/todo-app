@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Prompt", sans-serif;
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-image: url("./images/bg.jpg");
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-container {
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1rem 2rem 2rem;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 3px 20px;
+}
+
+.title {
+  text-align: center;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: #e0e0e0;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.icon-func {
+  display: flex;
+  gap: 1rem;
+}
+
+.todo-status, .todo-delete {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  scale: 1.5;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.form-input{
+  flex: 1;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: #ccc;
+  &:focus {
+    background-color: #e0e0e0;
+    outline: none;
+  }
+}
+
+::placeholder{
+  color: #666;
+}
+
+.form-button {
+  background-color: #785dc8;
+  border: 1px solid #6d54b6;
+  color: white;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #654eac;
+}
+
+.form-button:active {
+  position: relative;
+  top: 1px;
+}
+
+@media (max-width:768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .card-container {
+    width: 90%;
+  }
+
+  .form-input {
+    flex:1 ;
+    width: 100%;
+  }
+
+  .todo {
+    font-size: 1rem;
+  }
+
+  .todo-status, .todo-delete {
+    scale: 1;
+    &:hover {
+    transform: scale(1.15);
+    }
+  }
+
+  .icon-func {
+    gap: 0.5rem;
+  }
+}
